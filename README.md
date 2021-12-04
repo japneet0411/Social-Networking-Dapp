@@ -25,4 +25,14 @@ WebSocket.
 - Run "npm run dev"
 - Connect your app with metamask
 - Now you can upload the images and description and view your posts!
+## **SCREENSHOTS**
+# Landing Page
+![Landing Page](./images/landingPage.jpg)
+# Remix contract
+![Remix](./images/Remix.jpg)
+# Metamask connect
+![Metamask](./images/metamask.jpg)
+# Wall
+![Wall](./images/wall.jpg)
+ 
 
