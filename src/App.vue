@@ -4,22 +4,22 @@
       <!-- Upload Interface -->
       <div id="upload">
         <div v-if="this.$root.$data.loading === false">
-          <h1 >Post Here!</h1>
-          <h4>share your memories.</h4>
+          <h1 >SHARE YOUR MEMORIES</h1>
+          <h4>Add post!</h4>
 
           <!-- Form for file choose, caption text and submission -->
-          <form class="margin-sm" @submit.stop.prevent="handleSubmit">
+          <form class="margin-sm align" @submit.stop.prevent="handleSubmit">
             <div class="border-style">
-              <b-form-file plain @change="captureFile" />
+              <b-form-file plain @change="captureFile" size="60"/>
             </div>
             <b-form-textarea
               v-model="caption"
               placeholder="Post description"
               :rows="3"
               :max-rows="6"
-              class="margin-xs"
+              class="margin-xs border-style"
             />
-            <b-button class="margin-xs" variant="secondary" @click="handleOk">
+            <b-button class="btn margin-xs" variant="dark" @click="handleOk">
               Upload
             </b-button>
           </form>
@@ -34,7 +34,7 @@
           />
         </div>
       </div>
-
+      <h1 id="wall">..YOUR WALL..</h1>
       <!-- Posts Interface -->
       <ul class="home-list">
         <li
@@ -141,43 +141,59 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  color: #502c48;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  color:black;
+  /* background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%); */
+  background-image: url('./images/social.jpg');
+  background-size:cover;
+  background-color: #f8eae4;
+  background-blend-mode: luminosity;
+  height:auto;
  
+}
+#wall{
+ margin-top: 30px;
+ font-family: 'Smooch', cursive;
+ text-align: center;
+ color: azure;
+ background-color: black;
 }
 .home-load {
   width: 50px;
   height: 50px;
 }
 .card img {
-  object-fit: contain;
-  height: auto;
-  width: auto;
+  object-fit: cover;
+  height: 500px;
+  width: 500px;
 }
 .card {
   text-align:left;
   width: auto;
   margin-bottom: 20px;
   border: 5px solid black;
+  
 }
 .home-list {
   padding: 0;
   list-style: none;
+}
+.align{
+margin-left: 130px;
+  
 }
 .home-card-text {
   text-align: justify;
   margin-top: 10px;
 }
 #upload {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Smooch', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color:white;
-  margin-bottom: 5%;
+  margin-bottom: 35%;
   margin-top: 5%;
+ 
  
 }
 .upload-load {
@@ -191,6 +207,12 @@ export default {
   margin-top: 7%;
 }
 .border-style {
-  border: 1px solid #ced4da;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  width: 250px;
+}
+.btn{
+  margin-right: 150px;
 }
 </style>
